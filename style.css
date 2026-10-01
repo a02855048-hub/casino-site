@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d4af37;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #d4af37;
+}
+
+.crown {
+    font-size: 1.8rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.auth-buttons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-login {
+    background: transparent;
+    border: 1px solid #d4af37 !important;
+    color: #d4af37;
+}
+
+.btn-register {
+    background: linear-gradient(135deg, #d4af37, #f1c40f);
+    color: #000;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1596838132734-20329c89905c?w=1600') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content h1 span {
+    color: #d4af37;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.hero-buttons {
+    margin-bottom: 3rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: transform 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37, #f1c40f);
+    color: #000;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: scale(1.05);
+}
+
+.jackpot {
+    background: rgba(212, 175, 55, 0.15);
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 1.5rem 3rem;
+    display: inline-block;
+}
+
+.jackpot span {
+    display: block;
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.jackpot-amount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #d4af37;
+    letter-spacing: 2px;
+}
+
+/* Games */
+.games {
+    padding: 5rem 5%;
+    background: #111;
+}
+
+.games h2, .promotions h2, .about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #d4af37;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    border-color: #d4af37;
+}
+
+.game-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.game-card h3 {
+    margin-bottom: 0.5rem;
+    color: #d4af37;
+}
+
+.game-card p {
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.play-btn {
+    background: linear-gradient(135deg, #d4af37, #f1c40f);
+    color: #000;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.play-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Promotions */
+.promotions {
+    padding: 5rem 5%;
+    background: #0a0a0a;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.promo-card {
+    background: linear-gradient(145deg, #1f1a0a, #0d0a00);
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.promo-card h3 {
+    color: #d4af37;
+    margin-bottom: 1rem;
+}
+
+.promo-card p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+/* About */
+.about {
+    padding: 5rem 5%;
+    background: #111;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.feature span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.feature h4 {
+    color: #d4af37;
+    margin-bottom: 0.5rem;
+}
+
+.feature p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: #1a1a1a;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #d4af37;
+}
+
+#gameArea {
+    margin: 2rem 0;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .jackpot-amount {
+        font-size: 1.8rem;
+    }
+}

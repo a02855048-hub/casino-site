@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Casino | Premium Online Casino</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <span class="crown">👑</span> Royal Casino
+        </div>
+        <nav>
+            <a href="#home">হোম</a>
+            <a href="#games">গেমস</a>
+            <a href="#promotions">প্রমোশন</a>
+            <a href="#about">আমাদের সম্পর্কে</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-login">লগইন</button>
+            <button class="btn-register">রেজিস্টার</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>স্বাগতম <span>Royal Casino</span>-এ</h1>
+            <p>সবচেয়ে বড় জ্যাকপট • নিরাপদ • দ্রুত পেমেন্ট • ২৪/৭ সাপোর্ট</p>
+            <div class="hero-buttons">
+                <button class="btn-primary">এখনই খেলুন</button>
+                <button class="btn-secondary">বোনাস দেখুন</button>
+            </div>
+            <div class="jackpot">
+                <span>বর্তমান জ্যাকপট</span>
+                <div class="jackpot-amount" id="jackpot">৳ ১২,৪৫,৬৭,৮৯০</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games">
+        <h2>জনপ্রিয় গেমস</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-icon">🎰</div>
+                <h3>মেগা স্লটস</h3>
+                <p>হাজারো ফ্রি স্পিন ও বড় জ্যাকপট</p>
+                <button class="play-btn" onclick="playGame('slots')">খেলুন</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🎡</div>
+                <h3>রুলেট</h3>
+                <p>ক্লাসিক ইউরোপিয়ান রুলেট</p>
+                <button class="play-btn" onclick="playGame('roulette')">খেলুন</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🃏</div>
+                <h3>ব্ল্যাকজ্যাক</h3>
+                <p>ডিডরের বিরুদ্ধে লড়াই করুন</p>
+                <button class="play-btn" onclick="playGame('blackjack')">খেলুন</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">♠️</div>
+                <h3>পোকার</h3>
+                <p>টেক্সাস হোল্ডেম ও আরও</p>
+                <button class="play-btn" onclick="playGame('poker')">খেলুন</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">🎲</div>
+                <h3>ক্র্যাপস</h3>
+                <p>ডাইস গেমের উত্তেজনা</p>
+                <button class="play-btn" onclick="playGame('craps')">খেলুন</button>
+            </div>
+            <div class="game-card">
+                <div class="game-icon">💎</div>
+                <h3>লাইভ ক্যাসিনো</h3>
+                <p>রিয়েল ডিলারের সাথে খেলুন</p>
+                <button class="play-btn" onclick="playGame('live')">খেলুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions -->
+    <section id="promotions" class="promotions">
+        <h2>বিশেষ অফার</h2>
+        <div class="promo-grid">
+            <div class="promo-card">
+                <h3>১০০% ওয়েলকাম বোনাস</h3>
+                <p>প্রথম ডিপোজিটে ৳৫০,০০০ পর্যন্ত বোনাস</p>
+                <button class="btn-primary">ক্লেইম করুন</button>
+            </div>
+            <div class="promo-card">
+                <h3>ফ্রি স্পিন</h3>
+                <p>প্রতিদিন ৫০টি ফ্রি স্পিন পান</p>
+                <button class="btn-primary">ক্লেইম করুন</button>
+            </div>
+            <div class="promo-card">
+                <h3>ক্যাশব্যাক</h3>
+                <p>প্রতি সপ্তাহে ১০% ক্যাশব্যাক</p>
+                <button class="btn-primary">ক্লেইম করুন</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <h2>কেন Royal Casino?</h2>
+        <div class="features">
+            <div class="feature">
+                <span>🔒</span>
+                <h4>১০০% নিরাপদ</h4>
+                <p>SSL এনক্রিপশন ও লাইসেন্সড</p>
+            </div>
+            <div class="feature">
+                <span>⚡</span>
+                <h4>দ্রুত উইথড্র</h4>
+                <p>৫ মিনিটের মধ্যে টাকা পান</p>
+            </div>
+            <div class="feature">
+                <span>📱</span>
+                <h4>মোবাইল ফ্রেন্ডলি</h4>
+                <p>যেকোনো ডিভাইসে খেলুন</p>
+            </div>
+            <div class="feature">
+                <span>🎧</span>
+                <h4>২৪/৭ সাপোর্ট</h4>
+                <p>লাইভ চ্যাট সবসময় খোলা</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© ২০২৬ Royal Casino. সব অধিকার সংরক্ষিত।</p>
+        <p class="disclaimer">এটি শুধুমাত্র ডেমো সাইট। কোনো আসল জুয়া বা টাকার লেনদেন হয় না।</p>
+    </footer>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">গেম</h2>
+            <div id="gameArea">
+                <p>গেম লোড হচ্ছে...</p>
+            </div>
+            <button class="btn-primary" onclick="closeModal()">বন্ধ করুন</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
