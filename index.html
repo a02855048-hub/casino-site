@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Casino | Premium Online Casino</title>
+    <title>Royal Casino | Premium Online Casino Demo</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <span class="crown">👑</span> Royal Casino
+            <span class="crown">👑</span> <span>Royal Casino</span>
         </div>
         <nav>
             <a href="#home">হোম</a>
@@ -19,7 +19,11 @@
             <a href="#promotions">প্রমোশন</a>
             <a href="#about">আমাদের সম্পর্কে</a>
         </nav>
-        <div class="auth-buttons">
+        <div class="header-right">
+            <div class="balance-box">
+                <span>ব্যালেন্স:</span>
+                <strong id="balance">৳ ১০,০০০</strong>
+            </div>
             <button class="btn-login">লগইন</button>
             <button class="btn-register">রেজিস্টার</button>
         </div>
@@ -28,11 +32,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="badge">🔥 ডেমো মোড • আসল টাকা নয়</div>
             <h1>স্বাগতম <span>Royal Casino</span>-এ</h1>
             <p>সবচেয়ে বড় জ্যাকপট • নিরাপদ • দ্রুত পেমেন্ট • ২৪/৭ সাপোর্ট</p>
             <div class="hero-buttons">
-                <button class="btn-primary">এখনই খেলুন</button>
-                <button class="btn-secondary">বোনাস দেখুন</button>
+                <button class="btn-primary" onclick="document.getElementById('games').scrollIntoView({behavior:'smooth'})">এখনই খেলুন</button>
+                <button class="btn-secondary" onclick="document.getElementById('promotions').scrollIntoView({behavior:'smooth'})">বোনাস দেখুন</button>
             </div>
             <div class="jackpot">
                 <span>বর্তমান জ্যাকপট</span>
@@ -44,12 +49,14 @@
     <!-- Games Section -->
     <section id="games" class="games">
         <h2>জনপ্রিয় গেমস</h2>
+        <p class="section-subtitle">ডেমো মোডে খেলুন • কোনো আসল টাকা লাগবে না</p>
         <div class="games-grid">
-            <div class="game-card">
+            <div class="game-card featured">
+                <div class="game-badge">HOT</div>
                 <div class="game-icon">🎰</div>
                 <h3>মেগা স্লটস</h3>
-                <p>হাজারো ফ্রি স্পিন ও বড় জ্যাকপট</p>
-                <button class="play-btn" onclick="playGame('slots')">খেলুন</button>
+                <p>ইন্টারঅ্যাকটিভ স্লট মেশিন</p>
+                <button class="play-btn" onclick="openSlots()">খেলুন</button>
             </div>
             <div class="game-card">
                 <div class="game-icon">🎡</div>
@@ -89,19 +96,22 @@
         <h2>বিশেষ অফার</h2>
         <div class="promo-grid">
             <div class="promo-card">
+                <div class="promo-icon">🎁</div>
                 <h3>১০০% ওয়েলকাম বোনাস</h3>
                 <p>প্রথম ডিপোজিটে ৳৫০,০০০ পর্যন্ত বোনাস</p>
-                <button class="btn-primary">ক্লেইম করুন</button>
+                <button class="btn-primary" onclick="claimBonus(5000)">ক্লেইম করুন</button>
             </div>
             <div class="promo-card">
+                <div class="promo-icon">🎰</div>
                 <h3>ফ্রি স্পিন</h3>
                 <p>প্রতিদিন ৫০টি ফ্রি স্পিন পান</p>
-                <button class="btn-primary">ক্লেইম করুন</button>
+                <button class="btn-primary" onclick="claimBonus(2000)">ক্লেইম করুন</button>
             </div>
             <div class="promo-card">
+                <div class="promo-icon">💰</div>
                 <h3>ক্যাশব্যাক</h3>
                 <p>প্রতি সপ্তাহে ১০% ক্যাশব্যাক</p>
-                <button class="btn-primary">ক্লেইম করুন</button>
+                <button class="btn-primary" onclick="claimBonus(1500)">ক্লেইম করুন</button>
             </div>
         </div>
     </section>
@@ -136,7 +146,7 @@
     <!-- Footer -->
     <footer>
         <p>© ২০২৬ Royal Casino. সব অধিকার সংরক্ষিত।</p>
-        <p class="disclaimer">এটি শুধুমাত্র ডেমো সাইট। কোনো আসল জুয়া বা টাকার লেনদেন হয় না।</p>
+        <p class="disclaimer">⚠️ এটি শুধুমাত্র <strong>ডেমো সাইট</strong>। কোনো আসল জুয়া বা টাকার লেনদেন হয় না। সব ব্যালেন্স ভার্চুয়াল।</p>
     </footer>
 
     <!-- Game Modal -->
@@ -144,10 +154,32 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h2 id="modalTitle">গেম</h2>
-            <div id="gameArea">
-                <p>গেম লোড হচ্ছে...</p>
-            </div>
+            <div id="gameArea"></div>
             <button class="btn-primary" onclick="closeModal()">বন্ধ করুন</button>
+        </div>
+    </div>
+
+    <!-- Slots Modal -->
+    <div id="slotsModal" class="modal">
+        <div class="modal-content slots-modal">
+            <span class="close" onclick="closeSlots()">&times;</span>
+            <h2>🎰 মেগা স্লটস</h2>
+            <div class="slots-balance">ব্যালেন্স: <strong id="slotsBalance">৳ ১০,০০০</strong></div>
+            
+            <div class="slot-machine">
+                <div class="reel" id="reel1">🍒</div>
+                <div class="reel" id="reel2">🍋</div>
+                <div class="reel" id="reel3">🔔</div>
+            </div>
+
+            <div class="bet-controls">
+                <button onclick="changeBet(-100)">-</button>
+                <span>বেট: <strong id="currentBet">৳ ১০০</strong></span>
+                <button onclick="changeBet(100)">+</button>
+            </div>
+
+            <button class="spin-btn" id="spinBtn" onclick="spinSlots()">স্পিন করুন</button>
+            <div id="slotsResult" class="slots-result"></div>
         </div>
     </div>
 
